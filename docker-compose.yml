@@ -1,0 +1,13 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: devhub
+      POSTGRES_PASSWORD: devhub
+      POSTGRES_DB: devhub
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d:ro
+volumes:
+  pgdata:

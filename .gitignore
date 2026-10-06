@@ -1,0 +1,8 @@
+# secrets
+.env
+run.ps1
+
+# build output
+*.exe
+*.test
+*.out
